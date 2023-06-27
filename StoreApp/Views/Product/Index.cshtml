@@ -1,0 +1,16 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+@model List<StoreApp.Models.Product>
+
+@foreach (StoreApp.Models.Product prd in Model)
+{
+  <div>
+      <h3>@prd.ProductName</h3>
+      <p>@prd.Price</p>
+      <p>
+          <a class="" href="/product/get/@prd.ProductId">Get Details</a>
+      </p>
+  </div>
+}
